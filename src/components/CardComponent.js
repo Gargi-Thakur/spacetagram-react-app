@@ -1,24 +1,24 @@
 import { MediaCard } from '@shopify/polaris';
 
-function CardComponent() {
+function CardComponent(props) {
     return(
         <MediaCard
-            title="Title of picture"
+            title={props.title}
             primaryAction={{
                 content: 'Like',
                 onAction: () => { },
             }}
-            description="Date of capture in earth_date"
+            description={props.earthDate}
         >
             <img
-                alt=""
+                alt={props.title}
                 width="100%"
                 height="100%"
                 style={{
                     objectFit: 'cover',
                     objectPosition: 'center',
                 }}
-                src="https://burst.shopifycdn.com/photos/business-woman-smiling-in-office.jpg?width=1850"
+                src={props.imgSrc}
             />
         </MediaCard>
     )
