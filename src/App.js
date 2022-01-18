@@ -6,7 +6,6 @@ import HomePage from './pages/HomePage';
 
 function App() {
   const nasaApiKey = process.env.REACT_APP_NASA_API_KEY;
-  console.log('nasaApiKey', nasaApiKey);
 
   // NASA API - Mars Rover Photos API
   const [marsRoverData, setMarsRoverData] = useState();
@@ -15,7 +14,9 @@ function App() {
     axios
       .get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${nasaApiKey}`)
       .then(result => {
-        setMarsRoverData(result.data.photos);
+        localStorage.setItem('marsRoverData', JSON.stringify(result.data.photos));
+        let data = JSON.parse(localStorage.getItem('marsRoverData'));
+        setMarsRoverData(data);              
       })
       .catch(error => {
         console.log(error);
@@ -25,7 +26,6 @@ function App() {
   return (
     <AppProvider i18n={enTranslations}>
       <div className="App">
-        {marsRoverData ? console.log('marsRoverData:', marsRoverData) : console.log('loading')}
         <HomePage marsRoverData={marsRoverData} />
       </div>
     </AppProvider>

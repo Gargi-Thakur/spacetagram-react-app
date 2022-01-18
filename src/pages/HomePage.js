@@ -1,4 +1,4 @@
-import { Heading, Page, TextContainer } from '@shopify/polaris';
+import { Heading, Page, TextContainer, Spinner } from '@shopify/polaris';
 import CardComponent from '../components/CardComponent';
 
 function HomePage(props) {
@@ -8,10 +8,12 @@ function HomePage(props) {
               <Heading element="h1">Spacetagram</Heading>
             <p>Brought to you by NASA's image API</p>
         </TextContainer>
-        
+      
+      <section className="Polaris-Card-Container">
       {props.marsRoverData ? props.marsRoverData.map((photo, index) => 
         <CardComponent key={index} title={photo.camera.full_name} earthDate={photo.earth_date} imgSrc={photo.img_src} />) 
-       : <p>Loading...</p>}
+        : <Spinner accessibilityLabel="Spinner example" size="large" />}
+      </section>
 
     </Page>
   );

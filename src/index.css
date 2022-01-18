@@ -1,3 +1,14 @@
+.Polaris-Page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Polaris-Card {
+    max-width: 600px;
+}
+
 h1.Polaris-Heading {
     font-size: 3rem;
     margin: 2rem 0;
@@ -6,3 +17,30 @@ h1.Polaris-Heading {
 .Polaris-TextContainer {
     margin-bottom: 2rem;
 }
+
+.Polaris-Spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.Polaris-Button {
+    padding: 0;
+    border: 0;
+    background: none;
+} 
+
+.Polaris-MediaCard__MediaContainer {
+    position: relative;
+}
+
+.likeButtonIcon {
+    position: absolute;
+    z-index: 10;
+    bottom: 1rem;
+    right: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
