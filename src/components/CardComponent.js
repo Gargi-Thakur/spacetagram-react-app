@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { MediaCard, Button } from '@shopify/polaris';
+import { useState } from "react";
+import { MediaCard } from '@shopify/polaris';
 import Heart from "react-animated-heart";
 
 function CardComponent(props) {
