@@ -5,8 +5,6 @@
 - The app uses Shopify's Polaris for styling its components (including the loading state while we wait for NASA’s API to return data)
 - The "like" action is animated using a dependency called react-animated-heart
 
-===============================================================================
-
 ## Available Scripts
 (https://github.com/facebook/create-react-app).
 
