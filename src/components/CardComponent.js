@@ -1,12 +1,18 @@
+import { useState, useEffect } from "react";
 import { MediaCard } from '@shopify/polaris';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function CardComponent(props) {
+
+    const [likeToggle, setLikeToggle] = useState(false);
+
     return(
         <MediaCard
             title={props.title}
             primaryAction={{
-                content: 'Like',
-                onAction: () => { },
+                content: `${ likeToggle ? "Unlike" : "Like" }`,
+                // onAction: (e) => {console.log('Liked')},
+                onAction: (e) => { setLikeToggle(!likeToggle) },
             }}
             description={props.earthDate}
         >
