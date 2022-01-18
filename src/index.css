@@ -9,6 +9,11 @@
     max-width: 600px;
 }
 
+.cardImage {
+    min-height: 600px;
+    object-fit: cover;
+}
+
 h1.Polaris-Heading {
     font-size: 3rem;
     margin: 2rem 0;

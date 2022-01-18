@@ -10,11 +10,6 @@ function CardComponent(props) {
     return(
         <MediaCard
             title={props.title}
-
-            // primaryAction={{
-            //     // content: `${ likeToggle ? "Unlike" : "Like" }`,
-            //     icon: <Heart isClick={likeToggle} onClick={() => setLikeToggle(!likeToggle)  } />
-            // }}
             description={props.earthDate}
             portrait={true}
         >
@@ -27,6 +22,7 @@ function CardComponent(props) {
                     objectFit: 'cover',
                     objectPosition: 'center',
                 }}
+                className="cardImage"
                 src={props.imgSrc}
             />
         </MediaCard>
